@@ -1,6 +1,6 @@
 {
   "name": "pnar-i18n",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "Multilingual support library for React applications with Pnar language support",
   "repository": {
     "type": "git",
@@ -34,8 +34,8 @@
   "author": "Armego Chylla",
   "license": "MIT",
   "peerDependencies": {
-    "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
-    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",

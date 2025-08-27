@@ -1,4 +1,4 @@
-# @armego/pnar-i18n
+# pnar-i18n
 
 A powerful, flexible internationalization library for React applications with built-in Pnar language support.
 
@@ -17,18 +17,16 @@ A powerful, flexible internationalization library for React applications with bu
 ## Installation
 
 ```bash
-npm install @armego/pnar-i18n
+npm install pnar-i18n
 # or
-yarn add @armego/pnar-i18n
+yarn add pnar-i18n
 ```
-
-> **Note:** This package is published under the `@armego` scope. The original intended name `@pnar-world/i18n` was not available.
 
 ## Quick Start
 
 ```typescript
 import React from 'react';
-import { TranslationProvider, useTranslation } from '@armego/pnar-i18n';
+import { TranslationProvider, useTranslation } from 'pnar-i18n';
 
 const translations = {
   en: {
@@ -143,7 +141,7 @@ const loadTranslations = async (language: string) => {
 ### Pluralization
 
 ```typescript
-import { usePluralize } from '@armego/pnar-i18n';
+import { usePluralize } from 'pnar-i18n';
 
 function MyComponent() {
   const pluralize = usePluralize();
@@ -155,7 +153,7 @@ function MyComponent() {
 ### Language Switcher
 
 ```typescript
-import { LanguageSwitcher } from '@armego/pnar-i18n';
+import { LanguageSwitcher } from 'pnar-i18n';
 
 function Header() {
   return (
@@ -201,7 +199,7 @@ function Header() {
 
 // App.tsx
 import React from 'react';
-import { TranslationProvider, useTranslation, usePluralize, LanguageSwitcher } from '@armego/pnar-i18n';
+import { TranslationProvider, useTranslation, usePluralize, LanguageSwitcher } from 'pnar-i18n';
 
 const loadTranslations = async (language: string) => {
   const response = await fetch(`/translations/${language}.json`);
