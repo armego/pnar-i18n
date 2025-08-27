@@ -12,7 +12,7 @@ export interface I18nConfig {
   defaultLanguage: Language;
   fallbackLanguage?: Language;
   translations: Translations;
-  loadTranslations?: (language: Language) => Promise<TranslationMap>;
+  loadTranslations?: (language: Language) => Promise<TranslationMap>; // eslint-disable-line no-unused-vars
   persistLanguage?: boolean;
   storageKey?: string;
   interpolation?: {
@@ -23,8 +23,8 @@ export interface I18nConfig {
 
 export interface TranslationContextType {
   language: Language;
-  setLanguage: (lang: Language) => void;
-  t: (key: string, options?: TranslationOptions) => string;
+  setLanguage: (lang: Language) => void; // eslint-disable-line no-unused-vars
+  t: (key: string, options?: TranslationOptions) => string; // eslint-disable-line no-unused-vars
   translations: Translations;
   isLoading: boolean;
   availableLanguages: Language[];

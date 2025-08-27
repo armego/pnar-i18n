@@ -8,7 +8,6 @@ import React, {
 import {
   Language,
   Translations,
-  TranslationMap,
   I18nConfig,
   TranslationContextType,
   TranslationOptions,

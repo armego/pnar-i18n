@@ -1,6 +1,6 @@
 {
   "name": "pnar-i18n",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Multilingual support library for React applications with Pnar language support",
   "repository": {
     "type": "git",
