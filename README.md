@@ -33,8 +33,8 @@ const translations = {
     greeting: 'Hello {{name}}!',
   },
   pnar: {
-    welcome: 'Oo',
-    greeting: 'Oo {{name}}!',
+    welcome: 'Alæ',
+    greeting: 'Hey[Hei/Hoi/Hiw] {{name}}!',
   },
 };
 
@@ -167,10 +167,10 @@ function Header() {
 
 // translations/pnar.json
 {
-  "welcome": "Wan",
-  "greeting": "Oo {{name}}!",
+  "welcome": "Alæ",
+  "greeting": "Hey[Hei/Hoi/Hiw] {{name}}!",
   "items": "ki item",
-  "items_many": "Boon item"
+  "items_many": "Bõn item"
 }
 
 // App.tsx
