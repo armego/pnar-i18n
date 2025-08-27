@@ -1,6 +1,6 @@
 {
   "name": "pnar-i18n",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Multilingual support library for React applications with Pnar language support",
   "repository": {
     "type": "git",
@@ -20,7 +20,8 @@
     "test:watch": "jest --watch",
     "lint": "eslint src --ext .ts,.tsx",
     "type-check": "tsc --noEmit",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "publish:npm": "npm publish --access public"
   },
   "keywords": [
     "react",
