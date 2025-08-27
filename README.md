@@ -1,4 +1,4 @@
-# @pnar-world/i18n
+# @armego/pnar-i18n
 
 A powerful, flexible internationalization library for React applications with built-in Pnar language support.
 
@@ -8,6 +8,7 @@ A powerful, flexible internationalization library for React applications with bu
 - ✅ **Dynamic Loading** - Load translations on-demand
 - ✅ **Interpolation** - Variable substitution in translations
 - ✅ **Pluralization** - Handle singular/plural forms
+- ✅ **Date Localization** - Format dates according to language
 - ✅ **Persistence** - Remember user's language preference
 - ✅ **Fallbacks** - Graceful degradation to fallback languages
 - ✅ **React Integration** - Hooks and context-based API
@@ -16,16 +17,18 @@ A powerful, flexible internationalization library for React applications with bu
 ## Installation
 
 ```bash
-npm install @pnar-world/i18n
+npm install @armego/pnar-i18n
 # or
-yarn add @pnar-world/i18n
+yarn add @armego/pnar-i18n
 ```
+
+> **Note:** This package is published under the `@armego` scope. The original intended name `@pnar-world/i18n` was not available.
 
 ## Quick Start
 
 ```typescript
 import React from 'react';
-import { TranslationProvider, useTranslation } from '@pnar-world/i18n';
+import { TranslationProvider, useTranslation } from '@armego/pnar-i18n';
 
 const translations = {
   en: {
@@ -94,6 +97,29 @@ const {
 } = useTranslation();
 ```
 
+### usePluralize Hook
+
+```typescript
+const pluralize = usePluralize();
+
+// Basic usage
+pluralize('item', 1); // "item"
+pluralize('item', 5); // "items" (if plural form exists)
+
+// With custom translations
+pluralize('apple', 3); // Uses translation key 'apple_many' if available
+```
+
+### useDateLocalization Hook
+
+```typescript
+const localizeDate = useDateLocalization();
+
+// Format dates according to current language
+localizeDate(new Date(), 'long'); // "December 25, 2023" (localized)
+localizeDate(new Date(), 'short'); // "12/25/23" (localized)
+```
+
 ## Advanced Usage
 
 ### Dynamic Translation Loading
@@ -117,7 +143,7 @@ const loadTranslations = async (language: string) => {
 ### Pluralization
 
 ```typescript
-import { usePluralize } from '@pnar-world/i18n';
+import { usePluralize } from '@armego/pnar-i18n';
 
 function MyComponent() {
   const pluralize = usePluralize();
@@ -129,7 +155,7 @@ function MyComponent() {
 ### Language Switcher
 
 ```typescript
-import { LanguageSwitcher } from '@pnar-world/i18n';
+import { LanguageSwitcher } from '@armego/pnar-i18n';
 
 function Header() {
   return (
@@ -175,7 +201,7 @@ function Header() {
 
 // App.tsx
 import React from 'react';
-import { TranslationProvider, useTranslation, usePluralize, LanguageSwitcher } from '@pnar-world/i18n';
+import { TranslationProvider, useTranslation, usePluralize, LanguageSwitcher } from '@armego/pnar-i18n';
 
 const loadTranslations = async (language: string) => {
   const response = await fetch(`/translations/${language}.json`);
@@ -217,6 +243,32 @@ function Content() {
   );
 }
 ```
+
+## Development
+
+```bash
+# Install dependencies
+npm install
+
+# Build the project
+npm run build
+
+# Run in development mode
+npm run dev
+
+# Run tests
+npm run test
+
+# Run linting
+npm run lint
+
+# Type checking
+npm run type-check
+```
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
